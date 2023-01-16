@@ -41,13 +41,6 @@ function App() {
     setPriority(evt.target.value)
   }
 
-  // const setHighPriorityBold = (todo) => {
-  //   if (todo.priority === "high")
-  //     return 
-  //   }
-
-
-
   const addTask = evt => {
     evt.preventDefault()
     const newTaskObject = {id: Date.now(), task: newTask, priority: priority}
@@ -80,13 +73,5 @@ function App() {
     </main>
   );
 }
-
-// const saveNewItem = (evt) => {
-//   evt.preventDefault()
-//   const newItemObject = {id: Date.now(), name: newItem}
-//   const newListOfItems = [...items, newItemObject]
-//   setItems(newListOfItems)
-//   setNewItem("")
-// }
 
 export default App;
