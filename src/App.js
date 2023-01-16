@@ -16,12 +16,21 @@ function App() {
   const [priority, setPriority] = useState("")
 
   const shoppingListItems = todos.map((todo) => {
+    if (todo.priority === "high") {
     return (
     <li key={todo.id}>
-      {todo.task}<br></br>
-      {todo.priority}
+      <b>{todo.task}</b><br></br>
+      <b>{todo.priority}</b>
     </li>
     )
+    } else {
+      return (
+      <li key={todo.id}>
+        {todo.task}<br></br>
+        {todo.priority}
+      </li>        
+      )
+    }
   })
 
   const handleTaskInput = (evt) => {
